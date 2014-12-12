@@ -11,20 +11,23 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>isotope</artifactId>
-    <version>2.1.1-SNAPSHOT</version>
+    <version>1.5.26-SNAPSHOT</version>
     <name>Isotope</name>
     <description>WebJar for Isotope</description>
     <url>http://webjars.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>2.1.0</upstream.version>
-        <upstream.url>https://raw.githubusercontent.com/metafizzy/isotope/v${upstream.version}/dist</upstream.url>
+        <upstream.version>1.5.26</upstream.version>
+        <upstream.url>https://raw.githubusercontent.com/metafizzy/isotope/v${upstream.version}</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
             {
                 "paths": {
-                    "isotope": "isotope.pkgd"
+                    "isotope": "jquery.isotope.pkgd"
+                },
+                "shim": {
+                    "isotope": [ "jquery" ]
                 }
             }
         </requirejs>
@@ -51,6 +54,14 @@
         </license>
     </licenses>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+    </dependencies>
+
     <scm>
         <url>http://github.com/webjars/isotope</url>
         <connection>scm:git:https://github.com/webjars/isotope.git</connection>
@@ -71,8 +82,8 @@
                         <configuration>
                             <target>
                                 <mkdir dir="${destDir}" />
-                                <get src="${upstream.url}/isotope.pkgd.js" dest="${destDir}" />
-                                <get src="${upstream.url}/isotope.pkgd.min.js" dest="${destDir}" />
+                                <get src="${upstream.url}/jquery.isotope.js" dest="${destDir}" />
+                                <get src="${upstream.url}/jquery.isotope.min.js" dest="${destDir}" />
                             </target>
                         </configuration>
                     </execution>
