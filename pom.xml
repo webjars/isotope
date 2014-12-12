@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>isotope</artifactId>
-    <version>1.5.26-SNAPSHOT</version>
+    <version>1.5.26</version>
     <name>Isotope</name>
     <description>WebJar for Isotope</description>
     <url>http://webjars.org</url>
@@ -66,7 +66,7 @@
         <url>http://github.com/webjars/isotope</url>
         <connection>scm:git:https://github.com/webjars/isotope.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/isotope.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>isotope-1.5.26</tag>
     </scm>
     
     <build>
